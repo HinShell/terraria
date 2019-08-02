@@ -1,0 +1,19 @@
+version: '3'
+services:
+  terraria:
+    restart: unless-stopped
+    image: terraria_server:latest
+    ports:
+      - 7777:7777 
+    environment:
+      - UID=1000
+      - GID=1000
+      - TYPE=tmodloader
+    volumes:
+      - ./world:/world
+      - ./logs:/logs
+      - ./mods:/mods
+      - ./config/server.conf:/config/server.conf
+      - ./data:/data
+    tty: true
+    stdin_open: true
