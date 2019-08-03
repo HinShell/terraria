@@ -12,7 +12,7 @@ if [ ! -e "${SERVER}" ] || [ ! -e "${VERSIONCHECK}" ] || [ -n "${FORCE_REDOWNLOA
   cd "${SERVER_ROOT}" || exit 1
   chmod a+rw ./*
   chmod a+x TerrariaServer*
-  wget -q https://github.com/blushiemagic/tModLoader/releases/download/v"${TMODLOADER_VERSION}"/tModLoader.Linux.v"${TMODLOADER_VERSION}".zip -O /tmp/"${TMODLOADER_ZIP}"
+  wget -q https://github.com/tModLoader/tModLoader/releases/download/v"${TMODLOADER_VERSION}"/tModLoader.Linux.v"${TMODLOADER_VERSION}".zip -O /tmp/"${TMODLOADER_ZIP}"
   cd "${SERVER_ROOT}" || exit 1
   bsdtar -xvf /tmp/"${TMODLOADER_ZIP}"
   rm  /tmp/"${TMODLOADER_ZIP}"

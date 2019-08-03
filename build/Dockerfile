@@ -3,7 +3,7 @@ FROM debian:stable-slim
 LABEL maintainer="humanoidinshell@gmail.com"
 
 ENV SERVER_VERSION=1353 \
-    TMODLOADER_VERSION=0.10.1.5 \
+    TMODLOADER_VERSION=0.11.3 \
     SERVER_ROOT=/data \
     SERVER_LOG=/logs \
     SERVER_ZIP=terraria-server.zip \
