@@ -22,4 +22,5 @@ if [ ! -e "${SERVER}" ] || [ ! -e "${VERSIONCHECK}" ] || [ -n "${FORCE_REDOWNLOA
   touch "${VERSIONCHECK}"
   chown -R terraria:terraria "${SERVER_ROOT}"
 fi
-exec gosu terraria /launch.sh "$@"
+#exec gosu terraria /launch.sh "$@"
+exec /run-enablemodTmodloader.sh "$@"
