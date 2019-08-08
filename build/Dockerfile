@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM mono
 
 LABEL maintainer="humanoidinshell@gmail.com"
 
