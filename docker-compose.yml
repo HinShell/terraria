@@ -1,7 +1,6 @@
 version: '3'
 services:
   terraria:
-    restart: unless-stopped
     image: terraria_server:latest
     ports:
       - 7777:7777 
