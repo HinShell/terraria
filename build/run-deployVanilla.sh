@@ -7,9 +7,9 @@ if [ ! -e "${SERVER}" ] || [ ! -e "${VERSIONCHECK}" ] || [ -n "${FORCE_REDOWNLOA
   cd "${SERVER_ROOT}" || exit 1
   rm -rf "${SERVER_ROOT:?}"/*
   rm -rf "${SERVER_ROOT:?}"/.local
-  wget -q http://terraria.org/server/terraria-server-"${SERVER_VERSION}".zip -O /tmp/"${SERVER_ZIP}"
-  bsdtar --strip-components=2 -xvf /tmp/"${SERVER_ZIP}" "${SERVER_VERSION}"/Linux/*
-  rm /tmp/"${SERVER_ZIP}"
+  wget -q http://terraria.org/server/terraria-server-"${VANILLA_VERSION}".zip -O /tmp/"${VANILLA_ZIP}"
+  bsdtar --strip-components=2 -xvf /tmp/"${VANILLA_ZIP}" "${VANILLA_VERSION}"/Linux/*
+  rm /tmp/"${VANILLA_ZIP}"
   cd "${SERVER_ROOT}" || exit 1
   chmod a+rw ./*
   chmod a+x TerrariaServer*

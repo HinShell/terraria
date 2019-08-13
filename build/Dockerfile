@@ -2,11 +2,11 @@ FROM mono
 
 LABEL maintainer="humanoidinshell@gmail.com"
 
-ENV SERVER_VERSION=1353 \
+ENV VANILLA_VERSION=1353 \
     TMODLOADER_VERSION=0.11.3 \
     SERVER_ROOT=/data \
     SERVER_LOG=/logs \
-    SERVER_ZIP=terraria-server.zip \
+    VANILLA_ZIP=terraria-server.zip \
     TMODLOADER_ZIP=tmodl.zip \
     UID=1000 \
     GID=1000 \

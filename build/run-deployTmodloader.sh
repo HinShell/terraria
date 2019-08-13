@@ -7,9 +7,9 @@ if [ ! -e "${SERVER}" ] || [ ! -e "${VERSIONCHECK}" ] || [ -n "${FORCE_REDOWNLOA
   cd "${SERVER_ROOT}" || exit 1
   rm -rf "${SERVER_ROOT:?}"/*
   rm -rf "${SERVER_ROOT:?}"/.local
-  wget -q http://terraria.org/server/terraria-server-"${SERVER_VERSION}".zip -O /tmp/"${SERVER_ZIP}"
-  bsdtar --strip-components=2 -xvf /tmp/"${SERVER_ZIP}" "${SERVER_VERSION}"/Linux/*
-  rm "/tmp/${SERVER_ZIP}"
+  wget -q http://terraria.org/server/terraria-server-"${VANILLA_VERSION}".zip -O /tmp/"${VANILLA_ZIP}"
+  bsdtar --strip-components=2 -xvf /tmp/"${VANILLA_ZIP}" "${VANILLA_VERSION}"/Linux/*
+  rm "/tmp/${VANILLA_ZIP}"
   wget -q https://github.com/tModLoader/tModLoader/releases/download/v"${TMODLOADER_VERSION}"/tModLoader.Linux.v"${TMODLOADER_VERSION}".zip -O /tmp/"${TMODLOADER_ZIP}"
   bsdtar -xvf /tmp/"${TMODLOADER_ZIP}"
   rm  /tmp/"${TMODLOADER_ZIP}"
