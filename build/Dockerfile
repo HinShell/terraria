@@ -12,6 +12,8 @@ ENV VANILLA_VERSION=1353 \
     GID=1000 \
     TYPE=VANILLA
 
+
+
 RUN groupadd -g $GID terraria && \
     useradd -s /bin/false -d $SERVER_ROOT -u $UID -g terraria terraria
 
@@ -23,7 +25,7 @@ RUN apt-get update && apt-get install -y gosu wget bsdtar && apt-get clean
 VOLUME ["/world","/logs","/config","/mods","/data"]
 EXPOSE 7777
 
-ADD server.conf /config
+ADD server.conf /tmp/
 ADD run.sh /
 ADD launch.sh /
 COPY run-* /

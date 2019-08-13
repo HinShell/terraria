@@ -16,4 +16,8 @@ if [ ! -e "${SERVER}" ] || [ ! -e "${VERSIONCHECK}" ] || [ -n "${FORCE_REDOWNLOA
   touch "${VERSIONCHECK}"
   chown -R terraria:terraria "${SERVER_ROOT}"
 fi
+if [ ! -e "/config/server.conf" ];then
+  cp /tmp/server.conf /config/server.conf
+  chown -R terraria:terraria /config/server.conf
+fi
 exec gosu terraria /launch.sh "$@"

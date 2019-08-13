@@ -12,7 +12,7 @@ services:
       - ./world:/world
       - ./logs:/logs
       - ./mods:/mods
-      - ./config/server.conf:/config/server.conf
+      - ./config/:/config/
       - ./data:/data
     tty: true
     stdin_open: true
