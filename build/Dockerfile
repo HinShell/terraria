@@ -9,7 +9,8 @@ ENV SERVER_VERSION=1353 \
     SERVER_ZIP=terraria-server.zip \
     TMODLOADER_ZIP=tmodl.zip \
     UID=1000 \
-    GID=1000
+    GID=1000 \
+    TYPE=VANILLA
 
 RUN groupadd -g $GID terraria && \
     useradd -s /bin/false -d $SERVER_ROOT -u $UID -g terraria terraria
