@@ -2,17 +2,8 @@ FROM mono
 
 LABEL maintainer="humanoidinshell@gmail.com"
 
-ENV VANILLA_VERSION=1353 \
-    TMODLOADER_VERSION=0.11.3 \
-    SERVER_ROOT=/data \
-    SERVER_LOG=/logs \
-    VANILLA_ZIP=terraria-server.zip \
-    TMODLOADER_ZIP=tmodl.zip \
-    UID=1000 \
-    GID=1000 \
-    TYPE=VANILLA
-
-
+ENV VANILLA_VERSION=1353 TMODLOADER_VERSION=0.11.3 SERVER_ROOT=/data SERVER_LOG=/logs VANILLA_ZIP=terraria-server.zip \
+    TMODLOADER_ZIP=tmodl.zip UID=1000 GID=1000 TYPE=VANILLA
 
 RUN groupadd -g $GID terraria && \
     useradd -s /bin/false -d $SERVER_ROOT -u $UID -g terraria terraria
